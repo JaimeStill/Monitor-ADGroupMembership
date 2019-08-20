@@ -307,8 +307,9 @@ Process
 
                     # Look for Group
                     $GroupName = Get-ADGroup @GroupSplatting -Properties * -ErrorAction Continue -ErrorVariable ErrorProcessGetADGroup;
-                    $DomainName = ($GroupName.canonicalname -split '/')[0];
-                    $RealGroupName = $GroupName.name;
+                    Write-Verbose -Message "[$ScriptName][Process] Extracting Domain Name from $($GroupName.CanonicalName)";
+                    $DomainName = ($GroupName.CanonicalName -split '/')[0];
+                    $RealGroupName = $GroupName.Name;
                 }
                 if ($QuestADSnapin)
                 {
