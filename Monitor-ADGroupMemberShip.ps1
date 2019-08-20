@@ -93,7 +93,7 @@ Begin
         #$ReportDateFormat = Get-Date - Format "yyy\MM\dd HH:mm:ss"
 
         # Active Directory Module
-        if (Get-Module -Name ActiveDiretory -ListAvailable) # verify AD Module is installed
+        if (Get-Module -Name ActiveDirectory -ListAvailable) # verify AD Module is installed
         {
             Write-Verbose -Message "[$ScriptName][Begin] Active Directory Module";
 
