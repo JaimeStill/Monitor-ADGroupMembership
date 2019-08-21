@@ -549,7 +549,7 @@ Process
                                 Credential = $SmtpCred
                             }
 
-                            Send-MailMessage @mailParam -UseSsl;
+                            Send-MailMessage @mailParam -UseSsl -BodyAsHtml;
 
                             Write-Verbose -Message "[$ScriptName][Process] $item - Email Sent.";
                         } # if (-not ($OneReport))
@@ -641,7 +641,7 @@ Process
                 Attachments = $attachments
             }
 
-            Send-MailMessage @mailParam -UseSsl;
+            Send-MailMessage @mailParam -UseSsl -BodyAsHtml;
             
             foreach ($a in $attachments)
             {
