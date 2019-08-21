@@ -303,7 +303,7 @@ Process
                 {
                     Write-Verbose -Message "[$ScriptName][Process] Active Directory Module";
 
-                    if ($PSBoudnParameters['Server']) { $GroupSplatting.Server = $Server; }
+                    if ($PSBoundParameters['Server']) { $GroupSplatting.Server = $Server; }
 
                     # Look for Group
                     $GroupName = Get-ADGroup @GroupSplatting -Properties * -ErrorAction Continue -ErrorVariable ErrorProcessGetADGroup;
